@@ -1,4 +1,4 @@
-from math import pi, pow, sqrt
+from math import pi, pow, sqrt, atan
 
 # Funciones
 def hipotenusa(x, y):
@@ -37,3 +37,12 @@ def area_triangulo(base, altura):
     :return:
     """
     return (base * altura) / 2
+
+
+def angulo_alfa(base, altura):
+    """
+    retorna los angulos internos del triangulo rectangulo
+    """
+    alpha = atan(altura/base)
+    beta = pi/2 - alpha
+    return alpha, beta
